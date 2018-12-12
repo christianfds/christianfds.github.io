@@ -467,7 +467,7 @@ class Game{
 
 	drawET(){
 		if(this.show_et){
-			ctx.drawImage(images["et"], 0, 0, images["et"].width, images["et"].height, window.W - images["et"].width*0.6 , 150, images["et"].width*0.6, images["et"].height*0.6);
+			ctx.drawImage(images["et"], 0, 0, images["et"].width, images["et"].height, window.W - images["et"].width*0.6 , 250, images["et"].width*0.6, images["et"].height*0.6);
 		}
 	}
 
@@ -555,6 +555,7 @@ class Game{
 		c.set_txt_color("white");
 		c.set_txt_align("center");
 		c.set_txt_pos("middle");
+		c.set_txt_y_offset(50);
 		
 		clickables.push(c);
 	}
@@ -987,11 +988,11 @@ class Clickable{
 		this.txt_color = "black";
 		this.txt_align = "start";
 		this.txt_pos = "";
+		this.txt_y_offset = 0;
 
 		this.is_clickable = true;
 		this.return_data = undefined;
 		this.is_question = is_question? is_question: false;
-		this.set_top_off = 0;
 	}
 
 	set_bg(bg){
@@ -1002,8 +1003,8 @@ class Clickable{
 		this.bg_hover = bg;
 	}
 
-	set_top_off(c){
-		this.set_top_off = c;
+	set_txt_y_offset(c){
+		this.txt_y_offset = c;
 	}
 
 	set_txt_color(c){
@@ -1069,7 +1070,7 @@ class Clickable{
 		else
 			x = (this.x - this.w/2) + 10;
 			
-		y = (this.y - this.h/2) + 10;
+		y = (this.y - this.h/2) + this.txt_y_offset;
 
 		ctx.textAlign = this.txt_align;
 
@@ -1113,7 +1114,8 @@ class Quiz{
 				c.set_txt_color("white");
 				c.set_txt_align("center");
 				c.set_txt_pos("middle");
-	
+				c.set_txt_y_offset(10);
+
 				clickables.push(c);		
 			}
 		}
@@ -1121,13 +1123,13 @@ class Quiz{
 		var x = new Clickable(window.W/2, window.H/2, window.W, window.H, this.pergunta, () => {
 		});
 
-		// x.set_top_off(30);
 		x.set_bg("rgba(1,1,1,0.5)");
 		x.set_bg_hover("rgba(1,1,1,0.5)");
 		x.set_txt_color("white");
 		x.set_txt_align("center");
 		x.set_txt_pos("middle");
 		x.set_is_clickable(false);
+		x.set_txt_y_offset(50);
 
 		clickables.push(x);
 
