@@ -1,1 +1,36 @@
-"Hello World!" 
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		window.onload = () => {
+
+			var list = [
+			{
+				"name": "Trabalho de Jogos",
+				"address": "./trabJogos/index.html"
+			},
+			]
+
+			// console.log()
+			view_list = $("#list_projects");
+			for(n in list){
+
+				var node = $("<li>"+"<a href='"+list[n].address+"'>"+list[n].name+"</a>"+"</li>");
+				view_list[0].appendChild(node[0]);
+
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<div>
+		<ul id="list_projects">
+		</ul>
+	</div>
+
+</body>
+</html>
