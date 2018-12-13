@@ -1094,10 +1094,16 @@ class Quiz{
 
 		this.respostas = [];
 		this.respostas[resposta_certa] = resposta_certa + " " + this.sufix;
+
+		this.range = 10;
+
 		for (var i = 0; i < 2; i++) {
-			var n = Math.round(generateRandomNumber(this.resposta_certa - 5 < 0? 0: this.resposta_certa - 5, this.resposta_certa + 5));
-			if(n == this.resposta_certa){
-				n++;
+			var n;
+			while(1){
+				var low = this.resposta_certa - this.range < 0? 0: this.resposta_certa - this.range;
+				var high = this.resposta_certa + this.range;
+				n = Math.round(generateRandomNumber(low,high));
+				if(n != this.resposta_certa && this.respostas[n] == undefined) break;
 			}
 			this.respostas[n] = n + " " + this.sufix;
 		}
