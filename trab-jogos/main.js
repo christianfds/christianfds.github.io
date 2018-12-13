@@ -373,18 +373,18 @@ class Game{
 		this.start_msg = "Olá, meu nome é Dash!\n" + 
 						"Me mudei recentemente pra uma nova galáxia, a galáxia Bhaskara, onde tudo\n" + 
 						"funciona com base na matemática, porém enquanto explorava\n" + 
-						"meu nova lar acabei me distanciando muito de meu planeta.\n" + 
+						"meu novo lar acabei me distanciando muito de meu planeta.\n" + 
 						"Como esta é uma galáxia matemática terei que resolver\n" + 
 						"alguns problemas para poder voltar ao meu planeta, esses\n" + 
 						"problemas ficam guardados de forma mágica dentro dos \n" + 
 						"asteróides que habitam essa galáxia. Com o conhecimento\n" +
-						"desses asteróides mágicos conseguiremos voltar ao meu planeta!\n" +
+						"desses asteróides mágicos, conseguiremos voltar ao meu planeta!\n" +
 						"Nossa, que confusão eu fui me meter, com certeza vou\n" + 
 						"precisar de sua ajuda!\n\n\n" + 
 						"Você poderia me ajudar a retornar ao meu planeta?";
 
 		this.how_2_play = "Para que você possa me ajudar, vou te ensinar os controles\n"+
-						"da minha espaço nave.\n\n" +
+						"da minha nave espacial.\n\n" +
 						"Para acelerar, aperte a tecla 'W'.\n" +
 						"Para virar para a esquerda, aperte a tecla 'A'.\n" +
 						"Para virar para a direita, aperte a tecla 'D'.\n" +
