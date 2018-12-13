@@ -333,12 +333,12 @@ class Game{
 			"op":[
 				{
 					"pergunta": "A mãe de Isabela deu a ela 12 balas para\ndividir com seus 3 amigos.\nQuantas balas cada um receberá?",
-					"resposta_certa": 12/3,
+					"resposta_certa": 4,
 					"sufixo": "balas"
 				},
 				{
 					"pergunta": "Joaquim comprou 200 peças de cerâmica para\ncolocar em 4 paredes. Quantas peças\nde cerâmica serão colocadas em cada parede?",
-					"resposta_certa": 200/4,
+					"resposta_certa": 50,
 					"sufixo": "peças de cerâmica"
 				},
 				{
